@@ -1,6 +1,6 @@
-# Afterschool Agent — overview and setup workflow
+# OneToEight Agent — overview and setup workflow
 
-The **Afterschool Agent** is a personalised AI assistant built on
+The **OneToEight Agent** is a personalised AI assistant built on
 [Hermes Agent](https://hermes-agent.nousresearch.com/docs) for
 young people aged 13 to 23 learning to put the **Eight Essentials** into daily
 practice. It is a gentle mentor that runs a daily rhythm of audio
@@ -15,13 +15,13 @@ working end to end. Read it once, then run through the steps.
 ## What this product is
 
 A young person aged 13 to 23 learns the Eight Essentials best by **doing one small thing a
-day** over weeks and months — not by reading a book. The Afterschool
+day** over weeks and months — not by reading a book. The OneToEight
 Agent exists to make that daily rhythm stick:
 
 - A **Morning Minute** lands at a chosen time in the student's chat
   (Telegram or WhatsApp). It's a brief audio plan for the day, plus
   text.
-- An **Afterschool Check-In** lands in the afternoon. It's a short
+- An **Afternoon Check-In** lands in the afternoon. It's a short
   text message: how the day went, what's next, one question to sit
   with overnight.
 - A **Planning Session** lands before bed. It maps tomorrow: school
@@ -92,7 +92,7 @@ key — no re-onboarding required.
         ↓
 day    Student does the one small action
         ↓
-17:00  Afterschool Check-In  Text only → Telegram or WhatsApp
+17:00  Afternoon Check-In  Text only → Telegram or WhatsApp
         ↓
 21:00  Planning Session      Text only → Telegram or WhatsApp
        Agent drafts tomorrow's plan → student edits → saves locally
@@ -130,7 +130,7 @@ Three cron jobs, all off until the student approves them at onboarding:
 1. **Morning Minute** — fires at the chosen time in the student's
    timezone, every day (or weekdays only, if preferred). Generates
    audio + text and delivers to Telegram or WhatsApp.
-2. **Afterschool Check-In** — fires at the chosen afternoon time,
+2. **Afternoon Check-In** — fires at the chosen afternoon time,
    same day-rule as the Morning Minute. Sends a short text message.
 3. **Planning Session** — fires before bed (default 9 pm), same
    day-rule. Drafts tomorrow's plan for the student to edit, then
@@ -142,7 +142,7 @@ explicit approval.
 ### The twenty daily prompts
 
 A small library of go-to questions a young person aged 13 to 23 can put to the
-Afterschool Agent at any time. The agent reads the relevant guide
+OneToEight Agent at any time. The agent reads the relevant guide
 chapter, draws on what it already knows about the student, and
 answers in their voice, in their tradition.
 
@@ -249,7 +249,7 @@ detail.
 | Ritual | When | Channel | What happens |
 |---|---|---|---|
 | **Morning Minute** | Daily at the student's chosen time (default 6 am) | Telegram or WhatsApp — **voice bubble + text** | Audio plan for the day, focused on one small action from the current essential. |
-| **Afterschool Check-In** | Daily at the student's chosen time (default 5 pm) | Telegram or WhatsApp — **text only** | Reflection on how the day went, plan for tomorrow, one question to sit with overnight. |
+| **Afternoon Check-In** | Daily at the student's chosen time (default 5 pm) | Telegram or WhatsApp — **text only** | Reflection on how the day went, plan for tomorrow, one question to sit with overnight. |
 | **Planning Session** | Daily before bed at the student's chosen time (default 9 pm) | Telegram or WhatsApp — **text only** | Agent drafts tomorrow's plan (school tasks, homework deadlines, the week's essential, one real-world thing). The student edits it. Saves locally. |
 | **Essential Summary** | On demand, any time the student asks | Telegram or WhatsApp — **voice note** | 3 to 5 minute spoken summary of one essential + a short written key-points list. |
 | **Essential Lesson** | On demand, any time the student asks | here.now — **HTML page link in chat** | Three-page lesson on one essential with cited sources, key quotes, and a short quiz. |
@@ -268,7 +268,7 @@ Morning Minute can cover in one minute.
 | Ritual | Skill path |
 |---|---|
 | Morning Minute | `skills/hermes/morning-minute/` |
-| Afterschool Check-In | `skills/afterschool/afterschool-checkin/` |
+| Afternoon Check-In | `skills/afterschool/afterschool-checkin/` |
 | Planning Session | `skills/afterschool/planning-session/` |
 | Essential Summary, Lesson, Poem, Song, Music Video | `skills/afterschool/essential-deep-dives/` (Song and Music Video use `skills/creative/openrouter-lyria-music/` and `skills/creative/poem-song-video-studio/`) |
 
@@ -305,7 +305,7 @@ the morning-minute Piper voice already chosen.
 
 ## What it costs to run
 
-Afterschool Agent runs **pay-as-you-go** — no subscription. You top up
+OneToEight Agent runs **pay-as-you-go** — no subscription. You top up
 an OpenRouter account and the agent draws from that credit.
 
 | Expense | Amount | Notes |
@@ -354,20 +354,20 @@ You need:
 
 ```bash
 mkdir -p ~/.hermes/profiles
-git clone https://github.com/boktoday/afterschool-agent-profile.git \
-  ~/.hermes/profiles/afterschool-agent
-hermes profile use afterschool-agent
+git clone https://github.com/boktoday/onetoeight-agent.git \
+  ~/.hermes/profiles/onetoeight-agent
+hermes profile use onetoeight-agent
 hermes chat
 ```
 
-> **Note:** the profile directory is named `afterschool-agent`, not
-> `afterschool`. Update commands that reference the profile path
+> **Note:** the profile directory is named `onetoeight-agent`, not
+> `onetoeight`. Update commands that reference the profile path
 > accordingly.
 
 To pull updates later:
 
 ```bash
-git -C ~/.hermes/profiles/afterschool-agent pull
+git -C ~/.hermes/profiles/onetoeight-agent pull
 ```
 
 ### 3 — First chat → orientation
@@ -402,7 +402,7 @@ Here is what it covers, in order:
 | 7. Eight Essentials guide | Confirms the lesson MD files are in `essentials/01..08/lessons/` | Files in the repo |
 | 8. Memory | Mnemosyne recommended (local-first, no external account) | `hermes memory setup` |
 | 9. Morning Minute schedule | What time, what timezone, what days | Created as a cron job |
-| 10. Afterschool Check-In schedule | What time, what timezone, what days | Created as a cron job |
+| 10. Afternoon Check-In schedule | What time, what timezone, what days | Created as a cron job |
 | 11. Planning Session schedule | What time (default 9 pm), what timezone, what days | Created as a cron job |
 | 12. Token Router (optional) | The plugin that narrows the tool surface | `plugins.enabled` in `config.yaml` |
 
@@ -487,7 +487,7 @@ The student doesn't interact with the agent through a terminal every
 day. The Telegram or WhatsApp chat **is** the daily surface:
 
 - **Morning Minute** arrives as a voice bubble + text plan.
-- **Afterschool Check-In** arrives as text.
+- **Afternoon Check-In** arrives as text.
 - **Planning Session** arrives before bed as text — the agent
   drafts tomorrow's plan (school tasks, homework deadlines, the
   week's essential, one real-world thing), the student edits it,
@@ -541,7 +541,7 @@ Occasional:
 
 - `hermes update` — pulls the standard Hermes skill library into the
   profile (curated skills are never overwritten).
-- `git -C ~/.hermes/profiles/afterschool-agent pull` — gets upstream
+- `git -C ~/.hermes/profiles/onetoeight-agent pull` — gets upstream
   improvements to the guide or skills.
 - `cronjob(action="list")` — confirms both jobs are still scheduled.
 
@@ -620,7 +620,7 @@ BLUESKY_APP_PASSWORD=...
 ## What's in the repo
 
 ```
-afterschool-agent-profile/
+onetoeight-agent/
 ├── README.md                              ← this file
 ├── SOUL.md                                ← persona and operating voice
 ├── AGENTS.md                              ← operating principles
@@ -664,7 +664,7 @@ afterschool-agent-profile/
 │   │   ├── hermes-mnemosyne/              ← memory provider
 │   │   ├── mnemosyne-maintenance/
 │   │   └── skill-auditor/
-│   └── afterschool/                       ← Afterschool-specific skills
+│   └── afterschool/                       ← the profile's own skills
 │       ├── afterschool-checkin/           ← afternoon reflection
 │       ├── eight-essentials-curriculum/   ← teaches from the guide
 │       ├── essential-deep-dives/          ← summary, lesson, poem formats
@@ -705,9 +705,9 @@ Every CLI toolset is **enabled by default**. The orientation walks the
 student through reviewing each one. To manually disable:
 
 ```bash
-hermes --profile afterschool-agent tools
+hermes --profile onetoeight-agent tools
 # Or start with a specific set:
-hermes --profile afterschool-agent chat --toolsets "web,terminal,file,memory"
+hermes --profile onetoeight-agent chat --toolsets "web,terminal,file,memory"
 ```
 
 The `tts` toolset must stay on for the Morning Minute.
@@ -797,7 +797,7 @@ Leave it off if:
 - The student (or parent) wants the full tool surface available.
 
 To enable: `hermes plugins enable hermes-token-router` (after
-`hermes profile use afterschool-agent`).
+`hermes profile use onetoeight-agent`).
 
 ---
 
@@ -805,7 +805,7 @@ To enable: `hermes plugins enable hermes-token-router` (after
 
 MIT — see `LICENSE`.
 
-The Afterschool Agent persona is an original assistant archetype
+The OneToEight Agent persona is an original assistant archetype
 written for this project. The Eight Essentials guide content is from
 the onetoeight *Eight Essentials* Universal Edition V.3.0.0, included
 with permission for use inside this profile.
