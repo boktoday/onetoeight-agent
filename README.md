@@ -327,6 +327,17 @@ when a task genuinely needs one.
 
 ---
 
+## Tutorials
+
+Prefer a guided walkthrough? The tutorial hub collects all the setup pages in one place:
+
+- **The build path** — seven pages that teach by building it: the agent made piece by piece, with audio to follow.
+- **The onboarding curriculum** — seven pages: the installer course, from first install to an agent wired up to chat.
+- **The walkthrough sheets** — the setup on a single page, in three languages.
+
+Open the hub at <https://gladtobe.here.now/hub-tutorials.html>. The workflow below covers the same ground in text, step by step.
+
+---
 ## The setup workflow
 
 ### 1 — Prerequisites (one-time, on the machine)
