@@ -1,6 +1,6 @@
 # Activities — Essential 1: Silence
 
-Custom activities the Afterschool Agent can offer the student when
+Custom activities the OneToEight Agent can offer the student when
 they're working on Silence. Each activity is a small, concrete
 practice the student does for a week or a season, not a one-off.
 

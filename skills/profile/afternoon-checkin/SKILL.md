@@ -1,8 +1,8 @@
 ---
-name: afterschool-checkin
-description: Use when generating the afternoon Afterschool Check-In for the Afterschool Agent student. Short text message: how the day went, the one small action tomorrow, and a single question to sit with overnight.
+name: afternoon-checkin
+description: Use when generating the Afternoon Check-In for the OneToEight Agent student. Short text message: how the day went, the one small action tomorrow, and a single question to sit with overnight.
 version: 1.0.0
-author: Afterschool Agent contributors
+author: OneToEight Agent contributors
 license: MIT
 platforms:
 - linux
@@ -11,18 +11,18 @@ platforms:
 metadata:
   hermes:
     tags:
-    - afterschool
+    - onetoeight
     - checkin
     - cron
     - eight-essentials
     related_skills:
     - morning-minute
     - eight-essentials-curriculum
-    - afterschool-agent-onboarding
+    - agent-onboarding
 ---
-# Afterschool Check-In
+# Afternoon Check-In
 
-The **Afterschool Check-In** is the afternoon companion to the
+The **Afternoon Check-In** is the afternoon companion to the
 Morning Minute. It runs once a day at the student's chosen time
 (default 5 pm) and lands as a short text message in the same
 channel as the Morning Minute. Audio is not required here — the
@@ -77,7 +77,7 @@ not a teacher marking homework.
 Look up the most recent Morning Minute text from the archive:
 
 ```bash
-tail -50 ~/.hermes/profiles/afterschool/morning-minute-archive.md
+tail -50 ~/.hermes/profiles/onetoeight/morning-minute-archive.md
 ```
 
 The essential and the day's action are in the header. Use them.
@@ -185,5 +185,5 @@ Schedule format depends on the student's choice. Common options:
 - `planning-session` — the evening session that maps tomorrow,
   fed by this check-in's note.
 - `eight-essentials-curriculum` — the deeper teaching skill.
-- `afterschool-agent-onboarding` — sets the check-in time and
+- `agent-onboarding` — sets the check-in time and
   channel.

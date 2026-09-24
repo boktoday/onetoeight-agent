@@ -1,4 +1,4 @@
-# Installing the Afterschool Agent Profile — Step-by-Step
+# Installing the OneToEight Agent Profile — Step-by-Step
 
 This guide walks a new person through installing this profile into
 Hermes Agent and getting the daily rhythm running. The agent itself
@@ -26,14 +26,14 @@ for both the installer and the agent.
 
 ```bash
 mkdir -p ~/.hermes/profiles
-git clone https://github.com/boktoday/afterschool-agent-profile.git \
-  ~/.hermes/profiles/afterschool-agent
-hermes profile use afterschool-agent
+git clone https://github.com/boktoday/onetoeight-agent.git \
+  ~/.hermes/profiles/onetoeight-agent
+hermes profile use onetoeight-agent
 hermes chat
 ```
 
-> **Note:** the profile directory is named `afterschool-agent`, not
-> `afterschool`. Update commands that reference the profile path
+> **Note:** the profile directory is named `onetoeight-agent`, not
+> `onetoeight`. Update commands that reference the profile path
 > accordingly.
 
 ### Step 2: First chat → accept the orientation
@@ -67,7 +67,7 @@ full "Proposed setup" summary before applying anything.
    `essentials/01..08/lessons/`
 8. **Memory** — Mnemosyne (local-first, no account) recommended
 9. **Morning Minute schedule** — time, timezone, days
-10. **Afterschool Check-In schedule** — time, timezone, days
+10. **Afternoon Check-In schedule** — time, timezone, days
 11. **Token Router** — optional plugin that narrows the agent's
     default tool surface. Leave off unless you want it.
 
@@ -152,7 +152,7 @@ with a callback.
 
 ```bash
 hermes update                    # pulls standard Hermes skill library
-git -C ~/.hermes/profiles/afterschool-agent pull   # upstream improvements
+git -C ~/.hermes/profiles/onetoeight-agent pull   # upstream improvements
 cronjob(action="list")           # confirm both jobs are scheduled
 ```
 
@@ -190,12 +190,12 @@ to navigate, don't guess.
 
 The agent must load the matching skill *before* doing the work:
 
-- **`afterschool-agent-onboarding`** — the consent-gated orientation
+- **`agent-onboarding`** — the consent-gated orientation
   (identity → tradition → integrations → schedules → plan → apply →
   verify)
 - **`setup-walkthrough`** — the four concrete setup pieces (Piper,
   Jina, channel, guide files)
-- **`morning-minute`** / **`afterschool-checkin`** — the cron
+- **`morning-minute`** / **`afternoon-checkin`** — the cron
   contracts
 - **`eight-essentials-curriculum`** — teaching from the guide
 - **`essential-deep-dives`** — the three deeper formats (summary

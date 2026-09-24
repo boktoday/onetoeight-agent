@@ -2,7 +2,7 @@
 name: eight-essentials-curriculum
 description: Use when the student asks a question about the Eight Essentials, when generating deeper lessons or activities, or when the orientation needs to load the guide MD files. Reads from essentials/<NN-name>/lessons/*.md and tailors by tradition.
 version: 1.0.0
-author: Afterschool Agent contributors
+author: OneToEight Agent contributors
 license: MIT
 platforms:
 - linux
@@ -11,13 +11,13 @@ platforms:
 metadata:
   hermes:
     tags:
-    - afterschool
+    - onetoeight
     - curriculum
     - eight-essentials
     - teaching
     related_skills:
     - morning-minute
-    - afterschool-checkin
+    - afternoon-checkin
     - setup-walkthrough
 ---
 # Eight Essentials Curriculum
@@ -302,11 +302,11 @@ practice, not doctrine.
 ## Related skills
 
 - `morning-minute` — uses the essentials for a daily summary.
-- `afterschool-checkin` — uses the essentials for a daily
+- `afternoon-checkin` — uses the essentials for a daily
   reflection.
 - `essential-deep-dives` — the on-demand formats (summary + voice
   note, HTML lesson, spoken-word poem) that go deeper than a chat
   reply.
 - `setup-walkthrough` — walks the student through dropping the
   guide MD files into `essentials/01..08/`.
-- `afterschool-agent-onboarding` — sets the tradition.
+- `agent-onboarding` — sets the tradition.

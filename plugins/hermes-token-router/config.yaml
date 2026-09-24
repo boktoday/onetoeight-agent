@@ -21,7 +21,7 @@ global:
     local_only: true
     retain_days: 30
 profiles:
-  afterschool:
+  onetoeight-agent:
     # Router is DISABLED by default. To enable: flip this to true
     # (and add hermes-token-router back to plugins.enabled in config.yaml).
     enabled: false

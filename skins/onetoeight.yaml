@@ -1,5 +1,5 @@
-name: afterschool
-description: Afterschool Agent — calm ink-and-sand. Slate, paper, and a single warm accent for headings and active borders.
+name: onetoeight
+description: OneToEight Agent — calm ink-and-sand. Slate, paper, and a single warm accent for headings and active borders.
 
 # Palette
 #   paper white    #F4F1EA   (primary text, light rows)
@@ -88,12 +88,12 @@ spinner:
     - ["· ", " ·"]
 
 branding:
-  agent_name: "Afterschool Agent"
-  welcome: "Afterschool Agent — what are we building?"
+  agent_name: "OneToEight Agent"
+  welcome: "OneToEight Agent — what are we building?"
   goodbye: "Done. •"
-  response_label: " • Afterschool "
+  response_label: " • OneToEight "
   prompt_symbol: "•"
-  help_header: "• Afterschool — say the word"
+  help_header: "• OneToEight — say the word"
 
 tool_prefix: "•"
 

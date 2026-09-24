@@ -1,6 +1,6 @@
 # Twenty prompts — questions to ask your agent on any given day
 
-A small library of questions a young person aged 13 to 23 can put to the Afterschool
+A small library of questions a young person aged 13 to 23 can put to the OneToEight
 Agent at any time. The agent reads the relevant guide chapter, draws
 on what it already knows about the student, and answers in their
 voice, in their tradition.

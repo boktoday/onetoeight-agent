@@ -1,7 +1,7 @@
 # Lessons — Essential 1: Silence
 
 Drop the relevant chapter of your guide into this folder as Markdown
-files. The Afterschool Agent reads them and uses them as the source
+files. The OneToEight Agent reads them and uses them as the source
 of truth for what to teach.
 
 ## File naming

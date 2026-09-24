@@ -1,4 +1,4 @@
-# Afterschool Agent — Morning Minute & Afterschool Check-In
+# OneToEight Agent — Morning Minute & Afternoon Check-In
 # Working revision document
 # Status: DRAFT v0.1 — for collaborative revision with Brendan. NOT repo code.
 
@@ -9,11 +9,11 @@
 Not a spec. Not code. Not something to commit to the repo yet.
 
 This is a **working document** we go through together over the next
-couple of days to redesign the Morning Minute and the Afterschool
+couple of days to redesign the Morning Minute and the Afternoon
 Check-In so they feel complete, functional, and give the young person
 the best possible experience. Everything here is open to change.
 
-Nothing in this file touches the repo. Keep it out of `afterschool-agent-profile/`.
+Nothing in this file touches the repo. Keep it out of `onetoeight-agent/`.
 
 ---
 
@@ -21,12 +21,12 @@ Nothing in this file touches the repo. Keep it out of `afterschool-agent-profile
 
 ### The three daily moments
 
-The Afterschool Agent day is three moments, in this order:
+The OneToEight Agent day is three moments, in this order:
 
 1. **Morning Minute** — 6 am, audio + text. Names the day's essential,
    the one small action, a Scripture quote (Christian) or wisdom
    reflection (Universal). ~60 seconds up to 3 minutes of audio.
-2. **Afterschool Check-In** — 5 pm (default), text only. Reflects on
+2. **Afternoon Check-In** — 5 pm (default), text only. Reflects on
    the day's action, plans tomorrow's action, and carries a note forward.
 3. **Planning Session** — 9 pm (default), text only. Drafts tomorrow's
    four lanes: school tasks, deadlines, the essential's action, and one
@@ -198,7 +198,7 @@ rules, the page template), not a set of pre-written chapters.
 
 The arc is not a template run eight times. It bends toward *that*
 student. The onboarding step (see
-`skills/hermes/afterschool-agent-onboarding`) captures a rich set of
+`skills/hermes/agent-onboarding`) captures a rich set of
 fields, and every one of them shapes how the arc is written. The agent
 must read these from memory and write each day's chapter against them.
 

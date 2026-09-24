@@ -1,6 +1,6 @@
 # Essential 1 — Silence
 
-This folder is the source of truth the Afterschool Agent uses to teach
+This folder is the source of truth the OneToEight Agent uses to teach
 **Silence** — the ability to sit still, to be alone with your own
 thoughts, to hear the quiet voice underneath the noise. The first
 essential, and the one everything else rests on.

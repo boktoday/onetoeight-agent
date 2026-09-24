@@ -2,7 +2,7 @@
 name: openrouter-lyria-music
 description: Generate full songs from poems/lyrics via Google Lyria 3 on OpenRouter. Use when the user asks to turn a poem or lyrics into a music file.
 version: 1.0.0
-author: Afterschool Agent
+author: OneToEight Agent
 license: MIT
 platforms:
 - linux

@@ -1,8 +1,8 @@
 ---
 name: morning-minute
-description: Use when generating the daily 6 am Morning Minute audio + text plan for the Afterschool Agent student. Reads the day's essential from essentials/, drafts a brief plan, runs Piper TTS, and delivers to the student's chosen channel (Telegram or WhatsApp).
+description: Use when generating the daily 6 am Morning Minute audio + text plan for the OneToEight Agent student. Reads the day's essential from essentials/, drafts a brief plan, runs Piper TTS, and delivers to the student's chosen channel (Telegram or WhatsApp).
 version: 1.0.0
-author: Afterschool Agent contributors
+author: OneToEight Agent contributors
 license: MIT
 platforms:
 - linux
@@ -11,15 +11,15 @@ platforms:
 metadata:
   hermes:
     tags:
-    - afterschool
+    - onetoeight
     - morning-minute
     - piper
     - tts
     - cron
     - eight-essentials
     related_skills:
-    - afterschool-agent-onboarding
-    - afterschool-checkin
+    - agent-onboarding
+    - afternoon-checkin
     - eight-essentials-curriculum
     - setup-walkthrough
 ---
@@ -83,7 +83,7 @@ credential.** Do this *before* anything else in this skill.
 import os, pathlib
 from pathlib import Path
 
-ENV_PATH = Path("/data/.hermes/profiles/afterschool-agent/.env")
+ENV_PATH = Path("/data/.hermes/profiles/onetoeight-agent/.env")
 if ENV_PATH.exists():
     for raw in ENV_PATH.read_text().splitlines():
         line = raw.strip()
@@ -103,7 +103,7 @@ for required in ("TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID",
     if not os.environ.get(required):
         raise RuntimeError(
             f"Missing required credential: {required}. "
-            "Add it to /data/.hermes/profiles/afterschool-agent/.env."
+            "Add it to /data/.hermes/profiles/onetoeight-agent/.env."
         )
 ```
 
@@ -279,10 +279,10 @@ import urllib.request, json, hashlib, os
 
 API_KEY = os.environ.get("HERENOW_API_KEY", "")
 BASE = "https://here.now"
-CLIENT = "afterschool-agent/morning-minute"
+CLIENT = "onetoeight-agent/morning-minute"
 
 ogg_path = "/path/to/morning-minute-today.ogg"
-remote_path = f"afterschool/morning-minute-{os.environ.get('DATE','today')}.ogg"
+remote_path = f"onetoeight/morning-minute-{os.environ.get('DATE','today')}.ogg"
 
 with open(ogg_path, "rb") as f:
     data = f.read()
@@ -295,7 +295,7 @@ manifest = {
          "hash": hashlib.sha256(data).hexdigest()}
     ],
     "displayName": f"Morning Minute {os.environ.get('DATE','today')}",
-    "displayDescription": "Daily Morning Minute audio for the Afterschool Agent student.",
+    "displayDescription": "Daily Morning Minute audio for the OneToEight Agent student.",
 }
 req = urllib.request.Request(
     f"{BASE}/api/v1/publish",
@@ -426,7 +426,7 @@ caption + plan body.
 
 ## Step 8 — Archive (optional but recommended)
 
-Save each day's plan text to `~/.hermes/profiles/afterschool/morning-minute-archive.md`:
+Save each day's plan text to `~/.hermes/profiles/onetoeight/morning-minute-archive.md`:
 
 ```markdown
 ## 12 August 2026
@@ -486,11 +486,11 @@ the student chats.
 
 ## Related skills
 
-- `afterschool-checkin` — the afternoon check-in that pairs with
+- `afternoon-checkin` — the afternoon check-in that pairs with
   this morning plan.
 - `eight-essentials-curriculum` — the skill that reads the guide
   MD files and teaches from them.
 - `setup-walkthrough` — walks the student through installing
   Piper, getting a Jina key, configuring Telegram or WhatsApp.
-- `afterschool-agent-onboarding` — sets the student's tradition,
+- `agent-onboarding` — sets the student's tradition,
   voice, and channel.

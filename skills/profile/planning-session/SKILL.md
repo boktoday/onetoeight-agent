@@ -1,8 +1,8 @@
 ---
 name: planning-session
-description: Use when generating the evening Planning Session for the Afterschool Agent student. Before bed, draft tomorrow's plan — school tasks, homework deadlines, the essential they are working on this week, one real-world thing they want to do. The agent drafts, the student edits, and the plan saves locally. No app, no account, no cloud sync.
+description: Use when generating the evening Planning Session for the OneToEight Agent student. Before bed, draft tomorrow's plan — school tasks, homework deadlines, the essential they are working on this week, one real-world thing they want to do. The agent drafts, the student edits, and the plan saves locally. No app, no account, no cloud sync.
 version: 1.0.0
-author: Afterschool Agent contributors
+author: OneToEight Agent contributors
 license: MIT
 platforms:
 - linux
@@ -11,19 +11,19 @@ platforms:
 metadata:
   hermes:
     tags:
-    - afterschool
+    - onetoeight
     - planning
     - cron
     - eight-essentials
     related_skills:
     - morning-minute
-    - afterschool-checkin
-    - afterschool-agent-onboarding
+    - afternoon-checkin
+    - agent-onboarding
 ---
 # Planning Session
 
 The **Planning Session** is the evening companion to the Morning
-Minute and the Afterschool Check-In. It runs once a day before bed
+Minute and the Afternoon Check-In. It runs once a day before bed
 (default 9 pm) and lands as a short text message in the same channel.
 
 Its one job: **help the student map tomorrow** before they close
@@ -97,7 +97,7 @@ Look up the most recent check-in and Morning Minute from the
 archive:
 
 ```bash
-tail -50 ~/.hermes/profiles/afterschool/morning-minute-archive.md
+tail -50 ~/.hermes/profiles/onetoeight/morning-minute-archive.md
 ```
 
 The check-in's note (what got done, what didn't) is the starting
@@ -126,8 +126,8 @@ Morning Minute can open with it:
 
 ```bash
 echo "## <date> — Tomorrow's plan" >> \
-  ~/.hermes/profiles/afterschool/planning-session-archive.md
-cat <<'EOF' >> ~/.hermes/profiles/afterschool/planning-session-archive.md
+  ~/.hermes/profiles/onetoeight-agent/planning-session-archive.md
+cat <<'EOF' >> ~/.hermes/profiles/onetoeight-agent/planning-session-archive.md
 - School: ...
 - Deadlines: ...
 - Essential: <name> — <one small action>
@@ -186,6 +186,6 @@ Schedule format depends on the student's choice. Common options:
 ## Related skills
 
 - `morning-minute` — reads the saved plan to open tomorrow.
-- `afterschool-checkin` — feeds the planning session its state.
-- `afterschool-agent-onboarding` — sets the planning time and
+- `afternoon-checkin` — feeds the planning session its state.
+- `agent-onboarding` — sets the planning time and
   channel.

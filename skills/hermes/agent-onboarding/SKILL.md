@@ -1,8 +1,8 @@
 ---
-name: afterschool-agent-onboarding
-description: Use when a new Afterschool Agent profile needs guided first-run setup, identity choices, tradition (Christian or Universal), morning voice and delivery channel (Telegram or WhatsApp), Piper TTS and Jina AI setup, Eight Essentials guide loading, Eight Essentials delivery order (sequential or randomised), memory preferences, and Morning Minute + Afterschool Check-In + Planning Session schedules. Plan the setup conversationally, obtain approval, apply only the selected changes, and verify every result.
+name: agent-onboarding
+description: Use when a new OneToEight Agent profile needs guided first-run setup, identity choices, tradition (Christian or Universal), morning voice and delivery channel (Telegram or WhatsApp), Piper TTS and Jina AI setup, Eight Essentials guide loading, Eight Essentials delivery order (sequential or randomised), memory preferences, and Morning Minute + Afternoon Check-In + Planning Session schedules. Plan the setup conversationally, obtain approval, apply only the selected changes, and verify every result.
 version: 2.0.0
-author: Afterschool Agent contributors
+author: OneToEight Agent contributors
 license: MIT
 platforms:
 - linux
@@ -14,7 +14,7 @@ metadata:
     - hermes
     - onboarding
     - setup
-    - afterschool-agent
+    - onetoeight-agent
     - eight-essentials
     - integrations
     - tools
@@ -28,15 +28,15 @@ metadata:
     - hermes-agent
     - hermes-mnemosyne
     - morning-minute
-    - afterschool-checkin
+    - afternoon-checkin
     - eight-essentials-curriculum
     - setup-walkthrough
 ---
-# Afterschool Agent Onboarding
+# OneToEight Agent Onboarding
 
 ## Overview
 
-Use this skill to turn a blank or lightly configured Afterschool
+Use this skill to turn a blank or lightly configured OneToEight
 Agent profile into a setup chosen by its owner — the parent or
 mentor setting up the profile for a young person aged 13 to 23, or the young person aged 13 to 23
 themselves if they're old enough to install their own tool.
@@ -62,12 +62,12 @@ accounts. Ask instead.
 ## When to use
 
 - A new student (or parent setting up for a student) starts the
-  Afterschool Agent profile for the first time.
+  OneToEight Agent profile for the first time.
 - The user says "set me up," "configure my assistant," "help me get
   the morning minute working," or similar.
 - The user wants to choose tradition, voice, delivery channel,
   Piper/Jina setup, or load the Eight Essentials guide.
-- The user asks to add or change the Morning Minute, the Afterschool
+- The user asks to add or change the Morning Minute, the OneToEight
   Check-In, or any other recurring job.
 - The user asks to review or change an existing starter setup.
 
@@ -77,7 +77,7 @@ accounts. Ask instead.
   `hermes-agent`.
 - Diagnosing an already configured integration; load the matching
   integration or troubleshooting skill.
-- Promoting the Afterschool Agent course, taking payment, or handling
+- Promoting the OneToEight Agent course, taking payment, or handling
   subscription access — that lives in the product itself, not here.
 - Making medical, legal, or financial decisions on the student's
   behalf.
@@ -159,7 +159,7 @@ Ask:
 - "What should I call you?" (the parent/mentor, or the student
   themselves).
 - "What would you like to call me?" (default suggestion: *the
-  Afterschool Agent*, or whatever the user prefers).
+  OneToEight Agent*, or whatever the user prefers).
 - "If the agent is for a student, what should it call them?"
 - "How old is the student?" (this helps calibrate advice and
   safety gates — a 13-year-old and a 17-year-old have different
@@ -279,7 +279,7 @@ search before moving on.
 
 Ask:
 
-> "Where should the Morning Minute and the Afterschool Check-In
+> "Where should the Morning Minute and the Afternoon Check-In
 > land? Telegram or WhatsApp?"
 
 - **Telegram** — easier, clearer, audio player renders inline.
@@ -402,7 +402,7 @@ days but never skips one permanently.
 The student can switch later by updating the `essentials_order`
 memory key — no re-onboarding required.
 
-### Afterschool Check-In schedule
+### Afternoon Check-In schedule
 
 Ask for:
 
@@ -489,7 +489,7 @@ Token Router:
 
 Scheduled jobs:
 - Morning Minute at <time> in <timezone>, <days>
-- Afterschool Check-In at <time> in <timezone>, <days>
+- Afternoon Check-In at <time> in <timezone>, <days>
 
 I will not install applications, connect accounts, or create
 recurring jobs until you approve this plan.
@@ -522,7 +522,7 @@ Apply only the approved items, in this order:
 10. Toolset selection through `hermes tools` if a persistent
     capability change is required.
 11. Existing cron inventory with `cronjob(action="list")`.
-12. New scheduled jobs using the Morning Minute and Afterschool
+12. New scheduled jobs using the Morning Minute and OneToEight
     Check-In templates below.
 13. A final readback and concise status report.
 
@@ -565,7 +565,7 @@ The Morning Minute cron prompt must say:
   Upload to here.now for the public audio URL. Deliver inline in
   Telegram or WhatsApp with the text below.
 - Archive the day's plan text to
-  `~/.hermes/profiles/afterschool/morning-minute-archive.md`.
+  `~/.hermes/profiles/onetoeight/morning-minute-archive.md`.
 - Don't write memories or ask for credentials in the cron prompt.
 - Don't use Mnemosyne tools from the cron context.
 
@@ -592,7 +592,7 @@ cronjob(
 The actual Morning Minute skill (`skills/hermes/morning-minute/`)
 contains the full contract — read it before generating.
 
-### Afterschool Check-In (the afternoon reflection)
+### Afternoon Check-In (the afternoon reflection)
 
 Default schedule: `0 17 * * *` (every day at 5 pm, student
 timezone). Override per the student's choice.
@@ -614,9 +614,9 @@ Example:
 cronjob(
     action="create",
     schedule="0 17 * * *",
-    name="Afterschool Check-In",
-    prompt="""You are running the student's Afterschool Check-In
-    for today. Use the afterschool-checkin skill. The student's
+    name="Afternoon Check-In",
+    prompt="""You are running the student's Afternoon Check-In
+    for today. Use the afternoon-checkin skill. The student's
     tradition is <christian/universal>. Deliver a short text
     message and save a one-line summary to memory. Do not write
     anything else to memory and do not ask for credentials in
@@ -702,7 +702,7 @@ again.
       toolset override.
 - [ ] Existing jobs were listed before any recurring job was
       created.
-- [ ] Morning Minute and Afterschool Check-In jobs were created
+- [ ] Morning Minute and Afternoon Check-In jobs were created
       only when individually approved, with self-contained
       prompts.
 - [ ] Post-change config, skill, toolset, and cron state were read

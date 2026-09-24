@@ -1,8 +1,8 @@
 ---
 name: setup-walkthrough
-description: Use when the student is at the setup stage of the Afterschool Agent profile and needs help installing Piper TTS, getting a Jina AI free API key, configuring Telegram or WhatsApp delivery, or putting the Eight Essentials guide MD files into essentials/. Walk through each step, verify each, and pause at the credential gates.
+description: Use when the student is at the setup stage of the OneToEight Agent profile and needs help installing Piper TTS, getting a Jina AI free API key, configuring Telegram or WhatsApp delivery, or putting the Eight Essentials guide MD files into essentials/. Walk through each step, verify each, and pause at the credential gates.
 version: 1.0.0
-author: Afterschool Agent contributors
+author: OneToEight Agent contributors
 license: MIT
 platforms:
 - linux
@@ -11,21 +11,21 @@ platforms:
 metadata:
   hermes:
     tags:
-    - afterschool
+    - onetoeight
     - setup
     - piper
     - jina
     - telegram
     - whatsapp
     related_skills:
-    - afterschool-agent-onboarding
+    - agent-onboarding
     - morning-minute
-    - afterschool-checkin
+    - afternoon-checkin
     - eight-essentials-curriculum
 ---
 # Setup Walkthrough
 
-The Afterschool Agent profile needs four things beyond the stock
+The OneToEight Agent profile needs four things beyond the stock
 Hermes setup: **Piper TTS**, **Jina AI search**, a **delivery
 channel** (Telegram or WhatsApp), and the **Eight Essentials
 guide MD files** in `essentials/01..08/`.
@@ -163,7 +163,7 @@ working. Mark it as configured in memory.
 
 ## Step 3 — Telegram or WhatsApp delivery
 
-The Morning Minute and the Afterschool Check-In both go to the
+The Morning Minute and the Afternoon Check-In both go to the
 student's chosen channel. The agent walks the student through
 whichever they pick.
 
@@ -200,7 +200,7 @@ through:
    chat = os.environ["TELEGRAM_CHAT_ID"]
    req = urllib.request.Request(
        f"https://api.telegram.org/bot{token}/sendMessage",
-       data=f'{{"chat_id": "{chat}", "text": "Afterschool Agent is set up. See you at 6 am."}}'.encode(),
+       data=f'{{"chat_id": "{chat}", "text": "OneToEight Agent is set up. See you at 6 am."}}'.encode(),
        headers={"Content-Type": "application/json"},
    )
    urllib.request.urlopen(req, timeout=15).read()
@@ -288,7 +288,7 @@ yet. Politely say so and offer to help.
 
 ## Related skills
 
-- `afterschool-agent-onboarding` — the broader onboarding flow
+- `agent-onboarding` — the broader onboarding flow
   that calls this skill for the four setup steps.
 - `morning-minute` — uses Piper and the delivery channel that
   this skill configures.

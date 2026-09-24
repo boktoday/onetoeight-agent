@@ -2,7 +2,7 @@
 name: essential-deep-dives
 description: Use when the student asks to go deeper on an essential — an essential summary (key points + a 3 to 5 minute voice note), a three-page HTML lesson (published to here.now with cited sources and a quiz), a rhyming spoken-word poem, an original song (Lyria 3 on OpenRouter, ~$0.08), or a music video of the song (~$0.35). Reads the guide, branches by tradition, and tailors to the student's profile.
 version: 1.0.0
-author: Afterschool Agent contributors
+author: OneToEight Agent contributors
 license: MIT
 platforms:
 - linux
@@ -11,7 +11,7 @@ platforms:
 metadata:
   hermes:
     tags:
-    - afterschool
+    - onetoeight
     - eight-essentials
     - teaching
     - deep-dives
@@ -20,13 +20,13 @@ metadata:
     related_skills:
     - eight-essentials-curriculum
     - morning-minute
-    - afterschool-checkin
+    - afternoon-checkin
     - setup-walkthrough
 ---
 
 # Essential Deep Dives
 
-Beyond the daily rhythm (Morning Minute + Afterschool Check-In) and
+Beyond the daily rhythm (Morning Minute + Afternoon Check-In) and
 free-form questions, the student can ask for **three deeper formats**
 on any of the Eight Essentials. Each one is a way to *learn* the
 essential properly and embed it, not just hear about it:
@@ -72,7 +72,7 @@ default to Song or Music Video — they cost real money.
 ## When **not** to use
 
 - For the daily Morning Minute → use `morning-minute`.
-- For the daily check-in → use `afterschool-checkin`.
+- For the daily check-in → use `afternoon-checkin`.
 - For a short question or a single-sentence answer → just answer it
   directly, or use `eight-essentials-curriculum`. These three formats
   are for when the student wants *more* than a chat reply.
@@ -529,7 +529,7 @@ total.
   three formats build on it.
 - `morning-minute` — the Piper → OGG → delivery mechanics these
   formats reuse (Steps 3–5 and 7).
-- `afterschool-checkin` — the daily reflection these formats sit
+- `afternoon-checkin` — the daily reflection these formats sit
   alongside.
 - `setup-walkthrough` — ensures Piper, the Jina key, and here.now are
   configured before any of these formats are requested.

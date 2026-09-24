@@ -1,4 +1,4 @@
-# Afterschool Agent — clean template. No credentials included.
+# OneToEight Agent — clean template. No credentials included.
 # After install, run `hermes setup` to add your own provider key,
 # or set model.default / model.provider below (see README.md).
 #
@@ -73,7 +73,7 @@ agent:
   reasoning_effort: high
 display:
   compact: true
-  skin: afterschool
+  skin: onetoeight
   show_reasoning: false
   streaming: true
   timestamps: false

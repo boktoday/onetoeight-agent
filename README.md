@@ -116,7 +116,7 @@ UTC is automatic.
 | When | The agent |
 |---|---|
 | First chat on a fresh profile | Offers the orientation, briefly, in its own voice |
-| Student says "set me up" | Runs `afterschool-agent-onboarding` (consent-gated, phased) |
+| Student says "set me up" | Runs `agent-onboarding` (consent-gated, phased) |
 | Student asks a question | Reads the relevant `essentials/<NN-name>/lessons/*.md`, synthesises, teaches |
 | Morning Minute cron fires | Generates the day's plan, runs Piper, uploads, delivers inline |
 | Check-In cron fires | Reads the most recent Morning Minute, drafts a short reflection, delivers as text |
@@ -268,9 +268,9 @@ Morning Minute can cover in one minute.
 | Ritual | Skill path |
 |---|---|
 | Morning Minute | `skills/hermes/morning-minute/` |
-| Afternoon Check-In | `skills/afterschool/afterschool-checkin/` |
-| Planning Session | `skills/afterschool/planning-session/` |
-| Essential Summary, Lesson, Poem, Song, Music Video | `skills/afterschool/essential-deep-dives/` (Song and Music Video use `skills/creative/openrouter-lyria-music/` and `skills/creative/poem-song-video-studio/`) |
+| Afternoon Check-In | `skills/profile/afternoon-checkin/` |
+| Planning Session | `skills/profile/planning-session/` |
+| Essential Summary, Lesson, Poem, Song, Music Video | `skills/profile/essential-deep-dives/` (Song and Music Video use `skills/creative/openrouter-lyria-music/` and `skills/creative/poem-song-video-studio/`) |
 
 **Consent.** The three cron-based rituals (Morning Minute, Check-In,
 Planning Session) are off until the student or parent approves them
@@ -379,7 +379,7 @@ On the first chat, the agent opens with:
 > minute working the way you want. Or we can skip it and just start."
 
 Say yes (or just ask *"help me set up my profile"* any time). The
-`afterschool-agent-onboarding` skill runs.
+`agent-onboarding` skill runs.
 
 ### 4 — The orientation (consent-gated)
 
@@ -492,7 +492,7 @@ day. The Telegram or WhatsApp chat **is** the daily surface:
   drafts tomorrow's plan (school tasks, homework deadlines, the
   week's essential, one real-world thing), the student edits it,
   and it saves locally. See
-  `skills/afterschool/planning-session/`.
+  `skills/profile/planning-session/`.
 - **Reply to the check-in** with a one-line note on how the day went.
   The agent saves a summary and uses it as the callback in tomorrow's
   Morning Minute.
@@ -504,7 +504,7 @@ day. The Telegram or WhatsApp chat **is** the daily surface:
 
 Beyond the daily rhythm, the student can ask for any of **three deeper
 formats** on any essential. All three are handled by the
-`essential-deep-dives` skill (see `skills/afterschool/essential-deep-dives/`),
+`essential-deep-dives` skill (see `skills/profile/essential-deep-dives/`),
 and all three require nothing but asking:
 
 - **Essential Summary** — the key points of one essential in plain
@@ -659,20 +659,20 @@ onetoeight-agent/
 │
 ├── skills/
 │   ├── hermes/                            ← Hermes-curated skills
-│   │   ├── afterschool-agent-onboarding/  ← the orientation
+│   │   ├── agent-onboarding/  ← the orientation
 │   │   ├── morning-minute/                ← daily plan + audio
 │   │   ├── hermes-mnemosyne/              ← memory provider
 │   │   ├── mnemosyne-maintenance/
 │   │   └── skill-auditor/
-│   └── afterschool/                       ← the profile's own skills
-│       ├── afterschool-checkin/           ← afternoon reflection
+│   └── profile/                       ← the profile's own skills
+│       ├── afternoon-checkin/           ← afternoon reflection
 │       ├── eight-essentials-curriculum/   ← teaches from the guide
 │       ├── essential-deep-dives/          ← summary, lesson, poem formats
 │       └── setup-walkthrough/            ← Piper, Jina, channel setup
 │
 ├── plugins/hermes-token-router/           ← optional tool-narrowing plugin
 ├── memories/                              ← generic operating-practice seeds
-└── skins/afterschool.yaml                 ← colour theme
+└── skins/onetoeight.yaml                 ← colour theme
 ```
 
 > **Standard Hermes skills** (web, terminal, github, creative, etc.)

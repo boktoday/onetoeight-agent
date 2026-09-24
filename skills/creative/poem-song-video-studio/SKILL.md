@@ -2,7 +2,7 @@
 name: poem-song-video-studio
 description: Turn an idea or poem into a poem, an AI song (Lyria 3 via OpenRouter), and/or a storyboard music video with optional poem-text overlay. Use when the user wants a poem set to music, a song, or a video for a poem.
 version: 1.0.0
-author: Afterschool Agent
+author: OneToEight Agent
 license: MIT
 platforms:
 - linux
