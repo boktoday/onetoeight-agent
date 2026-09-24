@@ -426,7 +426,7 @@ caption + plan body.
 
 ## Step 8 — Archive (optional but recommended)
 
-Save each day's plan text to `~/.hermes/profiles/onetoeight/morning-minute-archive.md`:
+Save each day's plan text to `~/.hermes/profiles/onetoeight-agent/morning-minute-archive.md`:
 
 ```markdown
 ## 12 August 2026

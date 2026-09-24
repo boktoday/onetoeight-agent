@@ -565,7 +565,7 @@ The Morning Minute cron prompt must say:
   Upload to here.now for the public audio URL. Deliver inline in
   Telegram or WhatsApp with the text below.
 - Archive the day's plan text to
-  `~/.hermes/profiles/onetoeight/morning-minute-archive.md`.
+  `~/.hermes/profiles/onetoeight-agent/morning-minute-archive.md`.
 - Don't write memories or ask for credentials in the cron prompt.
 - Don't use Mnemosyne tools from the cron context.
 

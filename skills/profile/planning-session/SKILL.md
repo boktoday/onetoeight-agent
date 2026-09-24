@@ -97,7 +97,7 @@ Look up the most recent check-in and Morning Minute from the
 archive:
 
 ```bash
-tail -50 ~/.hermes/profiles/onetoeight/morning-minute-archive.md
+tail -50 ~/.hermes/profiles/onetoeight-agent/morning-minute-archive.md
 ```
 
 The check-in's note (what got done, what didn't) is the starting

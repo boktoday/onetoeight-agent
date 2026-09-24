@@ -77,7 +77,7 @@ not a teacher marking homework.
 Look up the most recent Morning Minute text from the archive:
 
 ```bash
-tail -50 ~/.hermes/profiles/onetoeight/morning-minute-archive.md
+tail -50 ~/.hermes/profiles/onetoeight-agent/morning-minute-archive.md
 ```
 
 The essential and the day's action are in the header. Use them.
