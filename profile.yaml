@@ -1,5 +1,5 @@
 description: 'OneToEight Agent — a daily-practice companion for young people learning
-  the Eight Essentials (Christian or Universal tradition). Built on the Hermes Lean
+  the Eight Essentials (Christian, Universal, or their own tradition). Built on the Hermes Lean
   architecture: gentle mentor persona, profile-scoped local memory, and an optional
   Token Router disabled by default. Generates a Morning Minute audio plan at 6 am
   via Piper TTS, an afternoon Check-In, and teaches from a guide of

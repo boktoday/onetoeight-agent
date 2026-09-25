@@ -37,10 +37,11 @@ The agent does not lecture. It draws the wisdom out of the student
 with questions, holds the rhythm gently, and restarts them when they
 fall off — without scolding.
 
-### Two traditions
+### Two traditions, or your own
 
-Every student picks one at onboarding. The agent stays inside the
-chosen tradition; it never mixes the two:
+Every student picks one at onboarding. Or tell the agent your
+tradition and it will build that in. The agent stays inside the
+chosen tradition; it never mixes traditions:
 
 - **Christian** — Bible-anchored. The Morning Minute includes a Bible
   verse each morning, read naturally. The check-in frames the day
@@ -406,7 +407,7 @@ Here is what it covers, in order:
 |---|---|---|
 | 1. Identity | Names (yours, the student's, the agent's), reply style | Stored in the profile memory |
 | 2. Profile and life | Age, location, living situation, week shape, 3 interests, focus goal, friendship circle, blocker, off-limits — the fields the agent uses to tailor the Morning Minute and lessons | Stored in profile memory |
-| 3. Tradition | Christian or Universal | Stored in profile memory |
+| 3. Tradition | Christian, Universal, or their own | Stored in profile memory |
 | 4. Piper install + voice | Verifies Piper works, picks a voice, downloads the voice model | Voice model in `piper-voices/` |
 | 5. Jina API key | Sign up free, add to `.env`, agent verifies with a real search | `JINA_API_KEY=` in `.env` |
 | 6. Delivery channel | Telegram or WhatsApp bot credentials | `TELEGRAM_BOT_TOKEN=` / `WHATSAPP_*` in `.env` |

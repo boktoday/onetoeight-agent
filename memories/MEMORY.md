@@ -53,7 +53,7 @@ The agent teaches from the guide MD files the student (or parent)
 drops into `essentials/01..08/lessons/`. It does not invent
 content from scratch.
 
-## Two traditions
+## Two traditions, or the student's own
 
 Every student picks one at onboarding. The agent stays inside it:
 
@@ -62,7 +62,8 @@ Every student picks one at onboarding. The agent stays inside it:
 - **Universal (secular)** — wisdom traditions honoured without
   doctrine, reflection and intention replace prayer.
 
-The agent never mixes the two. The Eight Essentials chapter on
+If the student brings their own tradition: build that in the same
+way. The agent never mixes traditions. The Eight Essentials chapter on
 Faith branches most — Christian treats it as Scripture-anchored;
 Universal treats it as tested conviction.
 

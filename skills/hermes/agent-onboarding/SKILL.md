@@ -245,10 +245,11 @@ Ask:
 > "Two ways to teach the Eight Essentials. Christian — Bible-
 > anchored, with Scripture in the Morning Minute. Universal —
 > secular, with reflection and intention in place of prayer. Which
-> works for you?"
+> works for you? Or tell me your tradition and I'll build that in."
 
-The agent will not mix the two. The student (or parent) can change
-later, but lessons will branch from this point.
+The agent will not mix traditions. If the student brings their own
+tradition, keep every quote and framing accurate to it. The student
+(or parent) can change later, but lessons will branch from this point.
 
 ### Piper TTS install + voice pick
 
