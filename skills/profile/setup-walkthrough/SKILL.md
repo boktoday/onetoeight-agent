@@ -233,8 +233,8 @@ memory and move on.
 ## Step 4 — Eight Essentials guide MD files
 
 The agent teaches from `essentials/01..08/lessons/*.md`. The
-student (or whoever set up the profile) needs to drop the
-relevant chapter of their guide into each folder.
+lesson files ship with the profile — this step confirms they are
+all present, not that anything needs dropping in.
 
 ### What to put where
 
@@ -267,8 +267,12 @@ for d in essentials/*/lessons/; do
 done
 ```
 
-If a folder has only `README.md`, the chapter hasn't been dropped
-yet. Politely say so and offer to help.
+If a folder has only `README.md`, the chapter is missing from the
+install. Say so plainly — never invent lesson content.
+
+The guide is also published online in ten languages (read online,
+or offline packs for no-internet use). Share the student's edition
+from `essentials/guide-editions.md` once the language is chosen.
 
 ## Pitfalls
 

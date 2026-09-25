@@ -1,6 +1,6 @@
 ---
 name: agent-onboarding
-description: Use when a new OneToEight Agent profile needs guided first-run setup, identity choices, tradition (Christian or Universal), morning voice and delivery channel (Telegram or WhatsApp), Piper TTS and Jina AI setup, Eight Essentials guide loading, Eight Essentials delivery order (sequential or randomised), memory preferences, and Morning Minute + Afternoon Check-In + Planning Session schedules. Plan the setup conversationally, obtain approval, apply only the selected changes, and verify every result.
+description: Use when a new OneToEight Agent profile needs guided first-run setup, identity choices, the student's language for the guide and messages, tradition (Christian or Universal), morning voice and delivery channel (Telegram or WhatsApp), Piper TTS and Jina AI setup, Eight Essentials guide loading, Eight Essentials delivery order (sequential or randomised), memory preferences, and Morning Minute + Afternoon Check-In + Planning Session schedules. Plan the setup conversationally, obtain approval, apply only the selected changes, and verify every result.
 version: 2.0.0
 author: OneToEight Agent contributors
 license: MIT
@@ -42,9 +42,10 @@ mentor setting up the profile for a young person, or the young person
 themselves if they're old enough to install their own tool.
 
 The workflow is conversational and consent-gated: learn the
-identity, the tradition (Christian or Universal), the morning voice
-and delivery channel, the Piper and Jina credentials, and the
-Eight Essentials guide loaded into `essentials/`. Recommend a small
+identity, the student's language, the tradition (Christian or
+Universal), the morning voice and delivery channel, the Piper and
+Jina credentials, and the Eight Essentials guide loaded into
+`essentials/`. Recommend a small
 capability bundle, show the proposed changes, apply only what the
 user approves, and verify the result.
 
@@ -65,8 +66,9 @@ accounts. Ask instead.
   OneToEight Agent profile for the first time.
 - The user says "set me up," "configure my assistant," "help me get
   the morning minute working," or similar.
-- The user wants to choose tradition, voice, delivery channel,
-  Piper/Jina setup, or load the Eight Essentials guide.
+- The user wants to choose their language, tradition, voice,
+  delivery channel, Piper/Jina setup, or load the Eight Essentials
+  guide.
 - The user asks to add or change the Morning Minute, the OneToEight
   Check-In, or any other recurring job.
 - The user asks to review or change an existing starter setup.
@@ -88,8 +90,8 @@ accounts. Ask instead.
 
 1. Ask one small group of related questions at a time. Don't
    present a forty-item questionnaire.
-2. Start with identity and tradition, then move to the four
-   product-specific setups (Piper, Jina, channel, guide). Don't
+2. Start with identity, language, and tradition, then move to the
+   four product-specific setups (Piper, Jina, channel, guide). Don't
    ask users to choose toolset names they have never seen.
 3. Explain what will happen before it happens. No installation,
    account connection, credential request, or persistent cron
@@ -169,6 +171,36 @@ Ask:
 
 If the user skips a question, use a neutral default and say what
 was assumed.
+
+### Your language
+
+Ask:
+
+> "Which language would you like your guide, lessons and messages
+> in?"
+
+Offer the ten guide languages: English, Bahasa Melayu, ไทย (Thai),
+Tiếng Việt (Vietnamese), Bahasa Indonesia, Filipino (Tagalog),
+Español, 中文 (Chinese), 한국어 (Korean), 日本語 (Japanese). A
+student who wants any other language gets it too — the agent writes
+and teaches in it wherever it can; the ten are the languages with a
+fully published guide edition.
+
+What the choice changes:
+
+- The agent writes its messages (Morning Minute text, Check-In,
+  Planning Session) in this language.
+- It reads the English lesson files and teaches in this language.
+- It shares the student's published guide edition — read online, or
+  the offline pack for no-internet reading. All ten links live in
+  `essentials/guide-editions.md`.
+- If the README exists in the student's language
+  (`README.<code>.md`), point to it for setup reading.
+
+Record the choice in profile memory as `language` (e.g. `ms`, `tl`,
+`es`; `en` if skipped). Every skill that writes to the student reads
+this key first. Do not guess a student's language from their name,
+location, or tradition — ask.
 
 ### Profile and life
 
@@ -294,13 +326,17 @@ chosen channel's bot setup.
 
 ### Eight Essentials guide loading
 
-Hand off to `setup-walkthrough` Skill Step 4. The user (or parent)
-drops the relevant chapter of their guide into
-`essentials/<NN-name>/lessons/`. The agent reads each folder and
-confirms at least one lesson file is present before moving on.
+Hand off to `setup-walkthrough` Skill Step 4. The lesson files ship
+with the repo — the agent reads each `essentials/<NN-name>/lessons/`
+folder and confirms the chapter is present before moving on.
 
-If a folder is empty, pause politely and offer to help the user
-find or extract the right chapter from their guide.
+Share the guide's published edition in the student's language (the
+`language` key): the read-online link, and the offline pack for
+households with limited internet. All ten editions' links live in
+`essentials/guide-editions.md`.
+
+If a folder is missing its chapter, say so plainly — never invent
+lesson content.
 
 ### Memory
 
@@ -446,6 +482,10 @@ Identity:
 - Call me: <assistant name>
 - Reply style: <style>
 
+Language:
+- Guide, lessons and messages: <language>
+- Guide edition: <shared / to share after setup>
+
 Profile:
 - Student age / year: <age or year>
 - Location: <city/town, country>
@@ -508,7 +548,7 @@ Apply only the approved items, in this order:
 2. Profile and life fields in the active profile memory (writes
    `student_age`, `location`, `living_situation`, `week_shape`,
    `interests`, `focus_goal`, `friendship_circle`, `blocker`,
-   `off_limits` keys in Mnemosyne).
+   `off_limits`, and `language` keys in Mnemosyne).
 3. Tradition in the active profile memory (writes a `tradition`
    key in Mnemosyne).
 4. Piper voice path in the active profile memory.
@@ -582,6 +622,8 @@ cronjob(
         <christian/universal>. The essentials delivery order is
         <sequential/randomised> — read this from the essentials_order
         memory key, not from this prompt. The voice is <voice path>.
+        The student's language is read from the language memory key —
+        write all student-facing text in it.
         The delivery channel is <telegram/whatsapp>. Generate the day's
         plan, run Piper TTS, upload to here.now, deliver inline. Do
         not write memories or ask for credentials. Deliver only the
@@ -681,6 +723,8 @@ again.
    step involves money, an adult service, or a long-term
    commitment, bring a parent or trusted adult into the
    conversation.
+10. **Assuming a language.** Ask; never infer the student's
+    language from a name, location, or tradition.
 
 ## Verification checklist
 
@@ -688,6 +732,8 @@ again.
       before being written. Profile fields (age, location, hobbies,
       focus goal, friendship circle, blocker, off-limits) all
       landed in Mnemosyne with the student's approval.
+- [ ] Language was captured, stored as `language`, and the student's
+      guide edition link was shared.
 - [ ] Piper voice was verified with a test synthesis.
 - [ ] Jina API key was verified with a real search.
 - [ ] Delivery channel was verified with a test message.

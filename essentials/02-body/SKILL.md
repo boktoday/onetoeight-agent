@@ -21,7 +21,7 @@ sunlight. The hardware the rest of the life runs on.
 ```
 02-body/
 ├── SKILL.md                 ← this file
-├── lessons/                 ← drop the relevant chapter here
+├── lessons/                 ← the chapter files (christian / universal)
 └── activities/              ← sleep, food, movement, water, sunlight
 ```
 

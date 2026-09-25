@@ -10,7 +10,7 @@ essential, and the one everything else rests on.
 ```
 01-silence/
 ├── SKILL.md                 ← this file (agent's teaching notes)
-├── lessons/                 ← drop the relevant chapter of your guide here
+├── lessons/                 ← the chapter files, one per tradition
 │   └── README.md            ← schema + checklist for the lesson files
 └── activities/              ← custom activities for the student
     └── README.md            ← schema + checklist for activity files

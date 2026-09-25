@@ -3,9 +3,9 @@
 The **OneToEight Agent** is a personalised AI assistant built on
 [Hermes Agent](https://hermes-agent.nousresearch.com/docs) for
 young people learning to put the **Eight Essentials** into daily
-practice. It is a gentle mentor that runs a daily rhythm of audio
-plans, reflection check-ins, and small actions, taught from a guide of
-Markdown files the student (or their parent) drops into the repo.
+it is a gentle mentor that runs a daily rhythm of audio
+plans, reflection check-ins, and small actions, taught from the
+Eight Essentials guide that ships with the repo.
 
 This README is the overview and the workflow for getting the agent
 working end to end. Read it once, then run through the steps.
@@ -32,6 +32,9 @@ Agent exists to make that daily rhythm stick:
 - The agent teaches from the **Eight Essentials guide** stored in the
   repo (`essentials/01..08/lessons/*.md`), branching by the student's
   chosen tradition.
+- The guide is also published in **ten languages** — read online, or
+  downloaded as an offline pack for use without internet. See
+  `essentials/guide-editions.md`.
 
 The agent does not lecture. It draws the wisdom out of the student
 with questions, holds the rhythm gently, and restarts them when they
@@ -405,13 +408,13 @@ Here is what it covers, in order:
 |---|---|---|
 | Step | What happens | Where you add things |
 |---|---|---|
-| 1. Identity | Names (yours, the student's, the agent's), reply style | Stored in the profile memory |
+| 1. Identity | Names (yours, the student's, the agent's), reply style, and the language for the guide, lessons and messages | Stored in the profile memory |
 | 2. Profile and life | Age, location, living situation, week shape, 3 interests, focus goal, friendship circle, blocker, off-limits — the fields the agent uses to tailor the Morning Minute and lessons | Stored in profile memory |
 | 3. Tradition | Christian, Universal, or their own | Stored in profile memory |
 | 4. Piper install + voice | Verifies Piper works, picks a voice, downloads the voice model | Voice model in `piper-voices/` |
 | 5. Jina API key | Sign up free, add to `.env`, agent verifies with a real search | `JINA_API_KEY=` in `.env` |
 | 6. Delivery channel | Telegram or WhatsApp bot credentials | `TELEGRAM_BOT_TOKEN=` / `WHATSAPP_*` in `.env` |
-| 7. Eight Essentials guide | Confirms the lesson MD files are in `essentials/01..08/lessons/` | Files in the repo |
+| 7. Eight Essentials guide | Confirms the lesson MD files are in `essentials/01..08/lessons/`, and shares the guide's edition in the student's language (`essentials/guide-editions.md`) | Files in the repo |
 | 8. Memory | Mnemosyne recommended (local-first, no external account) | `hermes memory setup` |
 | 9. Morning Minute schedule | What time, what timezone, what days | Created as a cron job |
 | 10. Afternoon Check-In schedule | What time, what timezone, what days | Created as a cron job |
@@ -666,8 +669,7 @@ onetoeight-agent/
 │   │   └── activities/README.md
 │   ├── 09-conclusion/lessons/{christian,universal}.md
 │   ├── 10-before-after/lessons/{christian,universal}.md
-│   ├── christian-edition/                 ← full guide PDF (Christian)
-│   └── universal-edition/                 ← full guide PDF (Universal)
+│   └── guide-editions.md                  ← the guide online in ten languages
 │
 ├── skills/
 │   ├── hermes/                            ← Hermes-curated skills

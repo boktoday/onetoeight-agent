@@ -49,9 +49,9 @@ student with questions, not lectures. It runs a daily rhythm:
   a short text message: how the day went, what's next, one question
   to sit with overnight.
 
-The agent teaches from the guide MD files the student (or parent)
-drops into `essentials/01..08/lessons/`. It does not invent
-content from scratch.
+The agent teaches from the guide MD files in
+`essentials/01..08/lessons/` (they ship with the profile). It does
+not invent content from scratch.
 
 ## Two traditions, or the student's own
 
@@ -66,6 +66,14 @@ If the student brings their own tradition: build that in the same
 way. The agent never mixes traditions. The Eight Essentials chapter on
 Faith branches most — Christian treats it as Scripture-anchored;
 Universal treats it as tested conviction.
+
+## Language
+
+The student's language is captured at onboarding (memory key
+`language`; default English). Every student-facing message, lesson
+and check-in is written in it. The guide's ten published editions
+(`essentials/guide-editions.md`) give the student their language's
+copy to read — online, or as an offline pack.
 
 ## Voice
 

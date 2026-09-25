@@ -54,7 +54,9 @@ full "Proposed setup" summary before applying anything.
 1. **Identity** — your name, the student's name, the agent's name,
    reply style
 2. **Profile & life** — age, location, week shape, interests, focus
-   goal, off-limits topics
+   goal, off-limits topics, and the **language** for the guide,
+   lessons and messages (ten guide languages — see
+   `essentials/guide-editions.md`)
 3. **Tradition** — *Christian* (Scripture-anchored) or *Universal*
    (secular reflection). This branches all lessons; it never mixes.
 4. **Piper TTS** — verifies Piper runs, picks a morning voice,
@@ -98,7 +100,10 @@ TELEGRAM_CHAT_ID=123456789
 **Guide files** — the repo ships with
 `essentials/01..08/lessons/{christian,universal}.md` already in
 place. If a chapter is missing, the agent says so and helps you find
-it — it does **not** invent lesson content.
+it — it does **not** invent lesson content. The guide is also
+published online in ten languages — read online or download the
+offline packs from `essentials/guide-editions.md`; the agent shares
+the student's edition during setup.
 
 ### Step 5: `.env` summary
 

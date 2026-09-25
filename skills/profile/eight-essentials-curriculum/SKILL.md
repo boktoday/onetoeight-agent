@@ -63,11 +63,10 @@ ls essentials/02-body/lessons/
 # ... through 08-faith/
 ```
 
-If a folder has no `*.md` lesson files, the student (or whoever
-set up the profile) hasn't dropped the guide chapter in yet.
-Politely say so and offer to help them do it. Do not generate
-lesson content from scratch — that would invent teaching the
-student hasn't authorised.
+If a folder has no `*.md` lesson files, the chapter is missing from
+the install — say so plainly. (The guide ships with the profile, so
+this should not happen.) Never generate lesson content from scratch —
+that would invent teaching the student hasn't authorised.
 
 ### Step 2 — Branch by tradition
 
@@ -86,11 +85,19 @@ both).
 If neither branch file exists but a base `03-the-two-minute-practice.md`
 does, use that.
 
+Teach in the student's language (`language` memory key, default
+English). The lesson files are in English — translate the teaching
+live, and point the student at their language's published edition
+(`essentials/guide-editions.md`) when they want to read the guide
+directly.
+
 ### Step 3 — Read the student's profile and tailor
 
 Before drafting a lesson, pull these from Mnemosyne:
 
 - `student_age` — calibrate language, autonomy, and activity length.
+- `language` — write the lesson, summary, and chat response in the
+  student's language (default English).
 - `location` — recommend local places for Nature, set the
   weather/season context.
 - `interests` — three things the student is into right now. Pick

@@ -57,12 +57,14 @@ Draft tomorrow's plan with exactly four lanes:
 ## Input contract
 
 1. **Tradition** — `christian` or `universal` (from onboarding).
-2. **Delivery channel** — `telegram` or `whatsapp`.
-3. **Today's check-in** — what the afternoon check-in reported
+2. **Language** — the student's language for the message (memory
+   key `language`; default `en`).
+3. **Delivery channel** — `telegram` or `whatsapp`.
+4. **Today's check-in** — what the afternoon check-in reported
    (what got done, what got in the way).
-4. **This week's essential** — from memory or the most recent
+5. **This week's essential** — from memory or the most recent
    Morning Minute archive.
-5. **Memory** — read recent check-ins and plans for continuity.
+6. **Memory** — read recent check-ins and plans for continuity.
 
 ## Output contract (text only)
 

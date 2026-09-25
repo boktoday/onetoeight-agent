@@ -1,8 +1,9 @@
 # Lessons — Essential 1: Silence
 
-Drop the relevant chapter of your guide into this folder as Markdown
-files. The OneToEight Agent reads them and uses them as the source
-of truth for what to teach.
+The guide's chapter for this essential lives in this folder as
+Markdown — one file per tradition (`christian.md`, `universal.md`).
+The OneToEight Agent reads them and uses them as the source of
+truth for what to teach.
 
 ## File naming
 
@@ -64,6 +65,6 @@ The agent picks the right one based on the student's tradition.
 
 ## What to do first
 
-Drop your existing chapter on Silence from the onetoeight guide
-into this folder as `01-introduction.md`. The agent will pick it up
-on the next chat.
+The chapter ships in place. To extend this essential, add extra
+Markdown files here following the schema above — the agent picks
+them up on the next chat.

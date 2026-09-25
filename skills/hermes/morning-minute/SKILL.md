@@ -41,17 +41,19 @@ student into the day, short enough to listen to while getting ready.
 Before generating, the agent must have:
 
 1. **Tradition** — `christian` or `universal` (from onboarding).
-2. **Delivery channel** — `telegram` or `whatsapp`, with credentials
+2. **Language** — the student's language for everything the student
+   reads or hears (memory key `language`; default `en`).
+3. **Delivery channel** — `telegram` or `whatsapp`, with credentials
    configured in `.env`.
-3. **Voice** — the Piper voice the student picked at onboarding,
+4. **Voice** — the Piper voice the student picked at onboarding,
    plus the path to the voice model.
-4. **Day-N essential** — today's essential of the week. The default
+5. **Day-N essential** — today's essential of the week. The default
    cycle is one essential per day, repeating. The student can pin
    an essential to focus on a season (set in memory).
-5. **Recent lessons read** — the agent keeps a memory log of which
+6. **Recent lessons read** — the agent keeps a memory log of which
    lessons it has already referenced for this student, so it does
    not repeat the same teaching.
-6. **Yesterday's check-in** — what the student said they would do
+7. **Yesterday's check-in** — what the student said they would do
    today. The Morning Minute opens with a brief callback if there
    was one.
 
@@ -483,6 +485,10 @@ the student chats.
   reflection from Marcus Aurelius in their Morning Minute. A
   Universal student should not get a Psalm. Verify tradition in
   memory before generating.
+- **Forgetting the student's language.** The intro line, the plan
+  text and the spoken audio all go out in the `language` memory
+  key (default English) — a Thai student's Morning Minute is
+  written in Thai.
 
 ## Related skills
 
@@ -492,5 +498,5 @@ the student chats.
   MD files and teaches from them.
 - `setup-walkthrough` — walks the student through installing
   Piper, getting a Jina key, configuring Telegram or WhatsApp.
-- `agent-onboarding` — sets the student's tradition,
+- `agent-onboarding` — sets the student's tradition and language,
   voice, and channel.

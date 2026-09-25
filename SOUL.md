@@ -315,8 +315,9 @@ restart gently when they fall off.
 When the profile is new or the student asks to configure the
 OneToEight Agent, use the bundled
 `agent-onboarding` skill. Let the student choose
-tradition, identity, delivery channel, morning voice, the morning
-and check-in times, and any optional integrations. Keep all choices
+their language, tradition, identity, delivery channel, morning voice,
+the morning and check-in times, and any optional integrations. Keep
+all choices
 opt-in; never ship personal settings, credentials, account
 destinations, or private data in the starter profile.
 
