@@ -578,7 +578,7 @@ designed by people who study human psychology for a living.
     4.8 hrs                                  2x
 
 average daily screen time for 16­24  increase in anxiety and depression in
-              year olds                         teens since 2012
+              year olds                         young people since 2012
 
 The Comparison Trap
 

@@ -216,7 +216,7 @@ reflection.
   ("yes" / "apply it") before applying persistent changes
 - Pause at every credential gate — walk the user to where they add
   keys themselves
-- For a teenage student: when a step involves money, an adult
+- For a young student: when a step involves money, an adult
   service, or a long-term commitment, **bring the parent in** —
   plainly, without lecturing
 

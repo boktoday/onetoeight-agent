@@ -22,8 +22,7 @@ You can reach anyone, anywhere, at any time. You carry the
 sum of human knowledge in your pocket. And yet --
 something is missing.
 
-If you're reading this, you're probably somewhere between sixteen
-and twenty-five. You might be in your final years of school, slogging
+If you're reading this, you're probably a young person. You might be in your final years of school, slogging
 through exams that feel like they determine your entire worth as a
 human being. You might be at university, beginning to suspect that a
 degree alone won't answer the deeper questions that keep surfacing
@@ -51,7 +50,7 @@ phone, an algorithm, a platform, a subscription, a feed.
   1 in 5                 7 hrs                 52%
 
     young people       average daily screen   of graduates feel
-experience anxiety or     time for teens     unprepared for real
+experience anxiety or     time for young people     unprepared for real
 
      depression                                      life
 

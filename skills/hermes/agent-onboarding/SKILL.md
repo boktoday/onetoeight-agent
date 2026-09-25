@@ -119,7 +119,7 @@ accounts. Ask instead.
 11. Never use `enabled_toolsets: ["mnemosyne"]`; that is not a
     valid configuration. Use the `memory` provider setup for
     memory and the `cronjob` tool for schedules.
-12. **For teenage students: bring a parent in when a setup step
+12. **For young students: bring a parent in when a setup step
     involves money, an adult service, or a long-term commitment.**
     Don't lecture; just say so plainly and offer the parent-briefing
     note.
@@ -233,7 +233,7 @@ once.
   Scripture quote, any conversation starter, any community
   suggestion. Off-limits is honoured silently.
 
-If a question gets skipped, use the neutral default (age → "teen",
+If a question gets skipped, use the neutral default (age → "young person",
 location → "your area", and so on) and tell the student what was
 assumed. Don't push. The student can fill in missing fields later by
 chatting.
@@ -382,7 +382,7 @@ want the Eight Essentials to be delivered:
 
 If the student is unsure, default to **sequential**. Sequential is
 the path the guide was designed for; randomised is a power-user
-choice for teens who already know what they need.
+choice for young people who already know what they need.
 
 Record the choice in profile memory as `essentials_order` with the
 value `sequential` or `randomised`. The Morning Minute cron prompt
@@ -676,7 +676,7 @@ again.
 8. **Credential leakage.** Never place API keys, tokens, OAuth
    codes, or full account contents in a cron prompt, job name,
    response, skill file, or package artifact.
-9. **Skipping the parent for teenage students.** When a setup
+9. **Skipping the parent for young students.** When a setup
    step involves money, an adult service, or a long-term
    commitment, bring a parent or trusted adult into the
    conversation.
