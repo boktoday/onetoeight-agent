@@ -10,6 +10,10 @@ Eight Essentials guide that ships with the repo.
 This README is the overview and the workflow for getting the agent
 working end to end. Read it once, then run through the steps.
 
+> **Two ways in.** Take the **build path** and build the agent piece by piece: one capability, one payoff, each week, with audio to follow. Or install it with the setup workflow below.
+>
+> **Start the build path: <https://gladtobe.here.now/build-path/>**
+
 ---
 
 ## What this product is
@@ -335,7 +339,7 @@ when a task genuinely needs one.
 
 Prefer a guided walkthrough? The tutorial hub collects all the setup pages in one place:
 
-- **The build path** — seven pages that teach by building it: the agent made piece by piece, with audio to follow.
+- **The build path** — seven pages that teach by building it: the agent made piece by piece, with audio to follow. Start at <https://gladtobe.here.now/build-path/>.
 - **The onboarding curriculum** — seven pages: the installer course, from first install to an agent wired up to chat.
 - **The walkthrough sheets** — the setup on a single page, in three languages.
 
