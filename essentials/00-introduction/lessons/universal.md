@@ -2,7 +2,7 @@
 
 > This is the **Introduction** to the onetoeight *Eight
 > Essentials* guide (Universal Edition V.3.0.0), packaged for
-> the Afterschool Agent's Universal (secular) tradition.
+> the OneToEight Agent's Universal (secular) tradition.
 >
 > The Introduction contains the source guide's root metaphor,
 > the worked-example **Secular** version of Chapter Eight

@@ -2,7 +2,7 @@
 
 > This is the **Introduction** to the onetoeight *Eight
 > Essentials* guide (Universal Edition V.3.0.0), packaged for
-> the Afterschool Agent's Christian tradition.
+> the OneToEight Agent's Christian tradition.
 >
 > The Introduction contains the source guide's root metaphor,
 > the worked-example **Christian** version of Chapter Eight

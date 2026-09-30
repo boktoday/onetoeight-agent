@@ -2,8 +2,8 @@
 
 The **OneToEight Agent** is a personalised AI assistant built on
 [Hermes Agent](https://hermes-agent.nousresearch.com/docs) for
-young people learning to put the **Eight Essentials** into daily
-it is a gentle mentor that runs a daily rhythm of audio
+young people learning to put the **Eight Essentials** into daily practice.
+It is a gentle mentor that runs a daily rhythm of audio
 plans, reflection check-ins, and small actions, taught from the
 Eight Essentials guide that ships with the repo.
 

@@ -21,3 +21,6 @@ venv/
 
 # Local-only skill caches
 skills/.cache/
+
+# Locale build outputs
+dist/
