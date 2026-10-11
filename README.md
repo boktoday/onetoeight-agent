@@ -1,5 +1,9 @@
 # OneToEight Agent — overview and setup workflow
 
+> **Download, free for everyone:** [the latest ZIP](https://github.com/boktoday/onetoeight-agent/archive/refs/heads/main.zip) — or use the green **Code → Download ZIP** button on this page.  
+> Come subscribe to [our community](https://discord.gg/E48uw7Z94) for installation help, weekly office hours, and challenge quests.
+
+
 The **OneToEight Agent** is a personalised AI assistant built on
 [Hermes Agent](https://hermes-agent.nousresearch.com/docs) for
 young people learning to put the **Eight Essentials** into daily practice.
